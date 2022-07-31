@@ -20,12 +20,49 @@ struct Mentor {
     var fullname: String {
         "\(name) \(surname)"
     }
+    
+    static func getMentorsList() -> [Mentor] {
+        var result: [Mentor] = []
+        let data = MentorDataStore()
+        
+        for _ in 1...100 {
+            result.append(
+                Mentor(
+                    name: data.name,
+                    surname: data.surname,
+                    city: data.city,
+                    scope: data.scope,
+                    reviews: Review.getReviews(),
+                    students: Student.getStudents()
+                )
+            )
+        }
+        
+        return result
+    }
 }
 
 struct Review {
     let reviewerName: String
     let rating: Int
     let text: String
+    
+    static func getReviews() -> [Review] {
+        var result: [Review] = []
+        let data = MentorDataStore()
+        
+        for _ in 0...Int.random(in: 1...10) {
+            result.append(
+                Review(
+                    reviewerName: data.fullName,
+                    rating: Int.random(in: 1...5),
+                    text: data.review
+                )
+            )
+        }
+        
+        return result
+    }
 }
 
 struct Student {
@@ -34,5 +71,21 @@ struct Student {
     
     var fullname: String {
         "\(name) \(surname)"
+    }
+    
+    static func getStudents() -> [Student] {
+        var result: [Student] = []
+        let data = MentorDataStore()
+        
+        for _ in 0...Int.random(in: 1...10) {
+            result.append(
+                Student(
+                    name: data.name,
+                    surname: data.surname
+                )
+            )
+        }
+        
+        return result
     }
 }
