@@ -25,12 +25,18 @@ class DeveloperData {
         "Ибрагимов"
     ]
     let telegrams = [
-        "@pisuil",
-        "@i_drozhzh",
-        "@meetigor" ,
-        "@DatsukMaxim",
-        " "
+        "pisuil",
+        "i_drozhzh",
+        "meetigor" ,
+        "DatsukMaxim",
+        "therenatibragimov"
     ]
-    
+    let cities = [
+        "Москва",
+        "Москва",
+        "Казань",
+        "Кемерово",
+        "Санкт-Петербург"
+    ]
     private init() {}
 }

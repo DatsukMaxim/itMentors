@@ -8,6 +8,8 @@
 import UIKit
 
 class SearchResultsViewController: UITableViewController {
+    
+    var mentorsList: [Mentor]!
 
     override func viewDidLoad() {
         super.viewDidLoad()

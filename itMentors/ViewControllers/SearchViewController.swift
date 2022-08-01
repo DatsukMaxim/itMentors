@@ -7,40 +7,37 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+protocol UserDelegate {
+    func setSelection(user: User)
+}
 
-    let mentorsList = Mentor.getMentorsList()
-    var cities: [String] = []
-    var activities: [String] = []
-    var selectedCity = ""
-    var selectedActivity = ""
-    var sortedList: [Mentor] = []
-    
+class SearchViewController: UIViewController {
+    //MARK: - IB Outlets
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var activityTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     
+    //MARK: - Public properties
+    let mentorsList = Mentor.getMentorsList()
+    var user: User!
+    var cityPicker: UIPickerView!
+    var activityPicker: UIPickerView!
+    
+    var cities: [String] {
+        Array(Set(mentorsList.map { $0.city })).sorted(by: <)
+    }
+    var activities: [String] {
+        Array(Set(mentorsList.map { $0.scope })).sorted(by: <)
+    }
+
+    //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         searchButton.layer.cornerRadius = 10
-        //в textField вместо клавиатуры будет выходить pickerView
-        select()
-        //выделяем города в отдельный массив, по алфавиту
-        cities = Array(Set(mentorsList.map { $0.city })).sorted(by: <)
-        //отдельный массив направлений, по авлфавиту
-        activities = Array(Set(mentorsList.map { $0.scope })).sorted(by: <)
-    }
-    
-    func select() {
-        let cityPicker = UIPickerView()
-        cityPicker.delegate = self
-        cityPicker.tag = 0
+        cityPicker = createPickerView(tag: 0)
+        activityPicker = createPickerView(tag: 1)
         cityTextField.inputView = cityPicker
-        
-        let activityPicker = UIPickerView()
-        activityPicker.delegate = self
-        activityPicker.tag = 1
         activityTextField.inputView = activityPicker
     }
 
@@ -49,28 +46,57 @@ class SearchViewController: UIViewController {
         view.endEditing(true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
-    @IBAction func searchButtonPressed() {
-        sortedList = mentorsList.filter { $0.city == selectedCity }
-        sortedList = sortedList.filter { $0.scope == selectedActivity }
-        for mentor in sortedList {
-            print("\(mentor.fullname)\n\(mentor.city)\n\(mentor.scope)\n")
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let userVC = segue.destination as? UserViewController {
+            userVC.delegate = self
+            userVC.user = user
+        } else if let mentorsVC = segue.destination as? SearchResultsViewController {
+            let selectedCity = cityTextField.text
+            let selectedActivity = activityTextField.text
+            
+            guard selectedCity != "" || selectedActivity != "" else {
+                showAlert(with: "Упс!🤔", and: "Выберите город и направление из списка")
+                return
+            }
+            let sortedList = mentorsList.filter {
+                ($0.city == selectedCity) && ($0.scope == selectedActivity)
+                
+            }
+            if sortedList.isEmpty {
+                self.showAlert(
+                    with: "Упс!🤔",
+                    and: "К сожалению, по данному запроусу пока нет подходящих менторов"
+                )
+                return
+            }
+            mentorsVC.mentorsList = sortedList
         }
     }
     
+    //MARK: - Private Methods
+    private func createPickerView(tag: Int) -> UIPickerView {
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.tag = tag
+        return picker
+    }
     
-
+    private func setUserSelection(city: String, activity: String) {
+        guard let cityRow = cities.firstIndex(of: city),
+              let activityRow = activities.firstIndex(of: activity)
+        else { return }
+        
+        cityPicker.selectRow(cityRow, inComponent: 0, animated: true)
+        activityPicker.selectRow(activityRow, inComponent: 0, animated: true)
+        
+        cityTextField.text = cities[cityPicker.selectedRow(inComponent: 0)]
+        activityTextField.text = activities[activityPicker.selectedRow(inComponent: 0)]
+    }
 }
 
+//MARK: - Picker View Data Source and Delegate
 extension SearchViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     //возвращает количество барабанов
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -78,31 +104,32 @@ extension SearchViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     //кол-во элементов, доступных в pickerView
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        switch pickerView.tag {
-        case 0: return cities.count
-        default: return activities.count
-        }
+        return (pickerView.tag == 0) ? cities.count : activities.count
     }
     //позволяет отображать в каждой строке PickerView определенное значение
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch pickerView.tag {
-        case 0: return cities[row]
-        default: return activities[row]
-        }
+       return (pickerView.tag == 0) ? cities[row] : activities[row]
     }
     //позволяет работать с выбранным элементом
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch pickerView.tag {
-        case 0:
-            selectedCity = cities[row]
-            cityTextField.text = selectedCity
-        default:
-            selectedActivity = activities[row]
-            activityTextField.text = selectedActivity
-        }
+        pickerView.tag == 0 ?
+        (cityTextField.text = cities[row]) : (activityTextField.text = activities[row])
     }
-    //кастомизация элементов pickerView
-//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-//        <#code#>
-//    }
+}
+
+//MARK: - AlertController
+extension SearchViewController {
+    private func showAlert (with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
+
+//MARK: - User Delegate
+extension SearchViewController: UserDelegate {
+    func setSelection(user: User) {
+        setUserSelection(city: user.city, activity: user.activity)
+    }
 }
