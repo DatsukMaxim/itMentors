@@ -184,8 +184,7 @@
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="searchButtonPressed" destination="FFo-01-O9i" eventType="touchUpInside" id="0vE-eg-B5b"/>
-                                    <segue destination="eCr-KL-m7I" kind="modal" modalPresentationStyle="fullScreen" id="i70-CT-hGK"/>
+                                    <segue destination="eCr-KL-m7I" kind="push" id="i70-CT-hGK"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-aZ-iAd">
@@ -218,7 +217,7 @@
                     <navigationItem key="navigationItem" title="Поиск ментора" id="sd2-up-FPH">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle.fill" catalog="system" style="done" id="10P-aQ-uTQ">
                             <connections>
-                                <segue destination="qjd-rJ-u6x" kind="presentation" modalPresentationStyle="fullScreen" id="Ztw-jG-fAl"/>
+                                <segue destination="qjd-rJ-u6x" kind="show" id="Ztw-jG-fAl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -232,21 +231,20 @@
             </objects>
             <point key="canvasLocation" x="1440" y="62.323943661971832"/>
         </scene>
-        <!--Mentor-->
+        <!--SearchResults-->
         <scene sceneID="eA6-Uk-iLv">
             <objects>
-                <viewControllerPlaceholder storyboardName="Mentor" id="eCr-KL-m7I" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SearchResults" id="eCr-KL-m7I" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="I8b-uQ-3gH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zox-sW-elH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2571" y="120"/>
         </scene>
-        <!--View Controller-->
+        <!--User View Controller-->
         <scene sceneID="52u-sX-gUr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H8P-cq-D0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="qjd-rJ-u6x" sceneMemberID="viewController">
+                <viewController id="qjd-rJ-u6x" customClass="UserViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3pd-9R-gX0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,6 +253,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pbH-hV-QxQ"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8P-cq-D0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2439" y="-548"/>
         </scene>

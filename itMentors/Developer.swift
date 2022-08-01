@@ -11,6 +11,7 @@ struct Developer {
     let name: String
     let surname : String
     let telegram: String
+    let city: String
     
     var fullname: String {
         name + " " + surname
@@ -24,6 +25,7 @@ extension Developer {
         let names = DeveloperData.shared.names
         let surnames = DeveloperData.shared.surnames
         let telegrams = DeveloperData.shared.telegrams
+        let cities = DeveloperData.shared.cities
         
         let iterations = names.count
         
@@ -31,11 +33,11 @@ extension Developer {
             let developer = Developer(
                 name: names[index],
                 surname: surnames[index],
-                telegram: telegrams[index]
+                telegram: telegrams[index],
+                city: cities[index]
             )
             developers.append(developer)
         }
-        
         return developers
     }
 }
