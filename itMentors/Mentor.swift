@@ -27,7 +27,7 @@ struct Mentor {
         var result: [Mentor] = []
         let data = MentorDataStore()
         
-        for _ in 1...100 {
+        for _ in 1...1000 {
             result.append(
                 Mentor(
                     name: data.name,
