@@ -18,8 +18,7 @@ struct Mentor {
     
     let reviews: [Review]
     let students: [Student]
-    
-    let photo: String
+   
     
     var fullname: String {
         "\(name) \(surname)"
