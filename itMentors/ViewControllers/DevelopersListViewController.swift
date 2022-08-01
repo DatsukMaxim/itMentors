@@ -44,5 +44,4 @@ class DevelopersListViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         developerVC.developer = developers[indexPath.row]
     }
-    
 }
