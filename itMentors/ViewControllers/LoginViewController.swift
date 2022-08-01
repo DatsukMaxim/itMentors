@@ -21,6 +21,11 @@ class LoginViewController: UIViewController {
         logoImage.layer.cornerRadius = logoImage.frame.height / 2
         logoImage.clipsToBounds = true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loginTF.text = ""
+        passwordTF.text = ""
+    }
 
     @IBAction func loginBtnTapped() {
         if loginTF.text == "" && passwordTF.text == "" {
@@ -37,10 +42,10 @@ class LoginViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainVC" {
-            let user = User(login: loginTF.text ?? "", password: passwordTF.text ?? "")
-            // Realise you logic to transfer User
+            let user = User(login: loginTF.text ?? "", password: passwordTF.text ?? "", preferedArea: nil, city: nil)
+            guard let searchVC = segue.destination as? SearchViewController else { return }
+            searchVC.user = user
         }
-        //Realise you logic to show dev team
     }
 }
 

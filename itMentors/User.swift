@@ -11,4 +11,6 @@ import Foundation
 struct User {
     let login: String
     let password: String
+    let preferedArea: String?
+    let city: String?
 }

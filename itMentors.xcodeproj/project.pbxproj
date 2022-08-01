@@ -24,7 +24,7 @@
 		AD61B6862892A98100881A8D /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61B6852892A98100881A8D /* Developer.swift */; };
 		AD61B6882892B41400881A8D /* DevelopersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61B6872892B41400881A8D /* DevelopersListViewController.swift */; };
 		AD61B68A2893171A00881A8D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61B6892893171A00881A8D /* SearchViewController.swift */; };
-		ADB10BEE2897BFE800597649 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB10BED2897BFE800597649 /* UserViewController.swift */; };
+		ADB10BEE2897BFE800597649 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB10BED2897BFE800597649 /* ProfileViewController.swift */; };
 		B38700D328907F1D00568C86 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38700D228907F1D00568C86 /* Mentor.swift */; };
 		B38700D6289147A100568C86 /* MentorDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38700D5289147A100568C86 /* MentorDataStore.swift */; };
 		B38700DA2896929200568C86 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38700D92896929200568C86 /* SearchResultsViewController.swift */; };
@@ -50,7 +50,7 @@
 		AD61B6852892A98100881A8D /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		AD61B6872892B41400881A8D /* DevelopersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopersListViewController.swift; sourceTree = "<group>"; };
 		AD61B6892893171A00881A8D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		ADB10BED2897BFE800597649 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		ADB10BED2897BFE800597649 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B38700D228907F1D00568C86 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		B38700D5289147A100568C86 /* MentorDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorDataStore.swift; sourceTree = "<group>"; };
 		B38700D92896929200568C86 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +118,7 @@
 				942D3E9928981060006EF29C /* MentorDetailsTabBarController.swift */,
 				942D3E9B28982887006EF29C /* MentorInfoViewController.swift */,
 				942D3E9F28982945006EF29C /* ReviewTableViewController.swift */,
+				ADB10BED2897BFE800597649 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -227,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD61B68A2893171A00881A8D /* SearchViewController.swift in Sources */,
-				ADB10BEE2897BFE800597649 /* UserViewController.swift in Sources */,
+				ADB10BEE2897BFE800597649 /* ProfileViewController.swift in Sources */,
 				AD61B6862892A98100881A8D /* Developer.swift in Sources */,
 				B38700D6289147A100568C86 /* MentorDataStore.swift in Sources */,
 				B38700DA2896929200568C86 /* SearchResultsViewController.swift in Sources */,

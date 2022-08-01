@@ -8,7 +8,7 @@
 import UIKit
 
 protocol UserDelegate {
-    func setSelection(user: User)
+    func setSelection(data: String)
 }
 
 class SearchViewController: UIViewController {
@@ -49,8 +49,9 @@ class SearchViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let userVC = segue.destination as? UserViewController {
+        if let userVC = segue.destination as? ProfileViewController {
             userVC.delegate = self
+            userVC.areas = activities
             userVC.user = user
         } else if let mentorsVC = segue.destination as? SearchResultsViewController {
             let selectedCity = cityTextField.text
@@ -92,6 +93,11 @@ class SearchViewController: UIViewController {
         activityPicker.selectRow(activityRow, inComponent: 0, animated: true)
         
         cityTextField.text = cities[cityPicker.selectedRow(inComponent: 0)]
+    }
+    
+    private func setUserSelection(activity: String) {
+        guard let activityRow = activities.firstIndex(of: activity) else { return }
+        activityPicker.selectRow(activityRow, inComponent: 0, animated: true)
         activityTextField.text = activities[activityPicker.selectedRow(inComponent: 0)]
     }
 }
@@ -129,7 +135,7 @@ extension SearchViewController {
 
 //MARK: - User Delegate
 extension SearchViewController: UserDelegate {
-    func setSelection(user: User) {
-        setUserSelection(city: user.city, activity: user.activity)
+    func setSelection(data: String) {
+        setUserSelection(activity: data)
     }
 }
