@@ -29,6 +29,7 @@ class MentorInfoViewController: UIViewController {
         mentorPhotoView.layer.cornerRadius = mentorPhotoView.bounds.width / 2
     }
     
+    //MARK: - Private Methods
     private func mentorLabelsSetup() {
         mentorNameLabel.text = mentor.fullname
         mentorLanguageLabel.text = mentor.scope
