@@ -25,7 +25,7 @@ class MentorInfoViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        mentorPhotoView.image = UIImage(named: mentor.photo)
+        mentorPhotoView.image = UIImage(named: mentor.image)
         mentorPhotoView.layer.cornerRadius = mentorPhotoView.bounds.width / 2
     }
     
