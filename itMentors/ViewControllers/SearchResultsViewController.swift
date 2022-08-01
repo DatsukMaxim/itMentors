@@ -11,13 +11,9 @@ class SearchResultsViewController: UITableViewController {
     
     var mentorsList: [Mentor]!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mentorsList.count
+        mentorsList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -32,7 +28,6 @@ class SearchResultsViewController: UITableViewController {
         content.imageProperties.cornerRadius = cell.frame.height / 2
         content.text = mentor.fullname
 
-        
         cell.contentConfiguration = content
 
         return cell
