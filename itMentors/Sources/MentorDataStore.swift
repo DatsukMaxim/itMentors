@@ -44,6 +44,13 @@ class MentorDataStore {
         "Минск", "Астана", "Одинцово",
         "Можайск", "Йошкар-Ола", "Пенза"
     ]
+    let images = [
+    "bezos", "cook", "durov",
+    "efimov", "gates", "ive",
+    "musk"
+    ]
+    
+    
     let scopes = [
         "Swift", "Objective-C", "Python",
         "JavaScript", "C#", "C++",
@@ -78,6 +85,10 @@ class MentorDataStore {
     
     var review: String {
         reviews.randomElement() ?? "Lorem ipsum dolor sit amet"
+    }
+    
+    var image: String {
+        images.randomElement() ?? "bezos"
     }
     
     var fullName: String {
