@@ -35,7 +35,7 @@ struct Mentor {
                     city: data.city,
                     scope: data.scope,
                     reviews: Review.getReviews(),
-                    students: Student.getStudents()
+                    students: Student.getStudents(),
                     photo: data.photo
                 )
             )

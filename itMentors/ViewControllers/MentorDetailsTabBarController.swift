@@ -21,6 +21,5 @@ class MentorDetailsTabBarController: UITabBarController {
         guard let reviewsVC = viewControllers?.last as? ReviewTableViewController else { return }
         mentorVC.mentor = mentor
         reviewsVC.mentor = mentor
-        
     }
 }

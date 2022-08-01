@@ -18,7 +18,6 @@ class MentorInfoViewController: UIViewController {
     @IBOutlet var mentorCityLabel: UILabel!
     @IBOutlet var experienceLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         mentorLabelsSetup()
