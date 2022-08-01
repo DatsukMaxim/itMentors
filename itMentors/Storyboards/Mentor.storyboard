@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCz-iV-pkG">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -11,7 +11,7 @@
         <!--About-->
         <scene sceneID="Tfk-2B-Gb6">
             <objects>
-                <viewController id="x2i-XN-18B" sceneMemberID="viewController">
+                <viewController id="x2i-XN-18B" customClass="MentorInfoViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wPO-pH-mw0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +72,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="info.circle" catalog="system" id="Hpk-fP-NAi"/>
+                    <connections>
+                        <outlet property="experienceLabel" destination="CLr-qP-e9b" id="DXb-2n-CGd"/>
+                        <outlet property="mentorCityLabel" destination="fIS-vu-lWp" id="XnY-hA-VVF"/>
+                        <outlet property="mentorLanguageLabel" destination="SXm-zl-5oO" id="e7G-0F-i0a"/>
+                        <outlet property="mentorNameLabel" destination="HNU-wS-WdB" id="rC0-CQ-eay"/>
+                        <outlet property="mentorPhotoView" destination="pd9-LU-nWF" id="EJb-4T-MFi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCb-eY-tb8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +87,7 @@
         <!--Review-->
         <scene sceneID="pUK-Mu-nXE">
             <objects>
-                <tableViewController id="ZoE-84-bkl" sceneMemberID="viewController">
+                <tableViewController id="ZoE-84-bkl" customClass="ReviewTableViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ua6-o7-hm6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="4219" y="929"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Mentor Details Tab Bar Controller-->
         <scene sceneID="G7n-s8-COC">
             <objects>
-                <tabBarController id="oCz-iV-pkG" sceneMemberID="viewController">
+                <tabBarController id="oCz-iV-pkG" customClass="MentorDetailsTabBarController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="2EK-C5-FDN"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sCY-UA-i7f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

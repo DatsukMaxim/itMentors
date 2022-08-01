@@ -84,10 +84,6 @@ class MentorDataStore {
         reviews.randomElement() ?? "Lorem ipsum dolor sit amet"
     }
     
-    var image: String {
-        images.randomElement() ?? "bezos"
-    }
-    
     var fullName: String {
         "\(name) \(surname)"
     }
