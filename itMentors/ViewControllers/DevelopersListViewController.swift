@@ -40,9 +40,8 @@ class DevelopersListViewController: UITableViewController {
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       guard let developerVC = segue.destination as? DeveloperViewController else { return }
+        guard let developerVC = segue.destination as? DeveloperViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         developerVC.developer = developers[indexPath.row]
     }
-    
 }

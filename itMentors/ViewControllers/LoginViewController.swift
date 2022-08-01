@@ -46,7 +46,6 @@ class LoginViewController: UIViewController {
             guard let searchVC = segue.destination as? SearchViewController else { return }
             searchVC.user = user
         }
-        //Realise you logic to show dev team
     }
 }
 

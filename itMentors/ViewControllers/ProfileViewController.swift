@@ -30,6 +30,7 @@ class ProfileViewController: UIViewController {
     }
 }
 
+// MARK: Extensions
 extension ProfileViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
