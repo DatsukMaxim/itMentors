@@ -19,7 +19,6 @@ struct Mentor {
     let reviews: [Review]
     let students: [Student]
    
-    
     var fullname: String {
         "\(name) \(surname)"
     }
@@ -37,8 +36,7 @@ struct Mentor {
                     scope: data.scope,
                     image: data.image,
                     reviews: Review.getReviews(),
-                    students: Student.getStudents(),
-                    photo: data.photo
+                    students: Student.getStudents()
                 )
             )
         }

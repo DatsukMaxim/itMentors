@@ -76,6 +76,10 @@ class MentorDataStore {
         cities.randomElement() ?? "Nowhere"
     }
     
+    var image: String {
+        images.randomElement() ?? "bezos"
+    }
+    
     var scope: String {
         scopes.randomElement() ?? "Sandbox"
     }
