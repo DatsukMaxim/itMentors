@@ -19,7 +19,7 @@ class ReviewTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Review", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = mentor.reviews.removeLast()
+        //content.text = mentor.reviews.removeLast()
         
         cell.contentConfiguration = content
         return cell
