@@ -8,8 +8,6 @@
 import UIKit
 
 class MentorInfoViewController: UIViewController {
-
-    var mentor: Mentor!
     
     @IBOutlet var mentorPhotoView: UIImageView!
     
@@ -17,6 +15,8 @@ class MentorInfoViewController: UIViewController {
     @IBOutlet var mentorLanguageLabel: UILabel!
     @IBOutlet var mentorCityLabel: UILabel!
     @IBOutlet var experienceLabel: UILabel!
+    
+    var mentor: Mentor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
