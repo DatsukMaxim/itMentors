@@ -10,12 +10,6 @@ import UIKit
 class ReviewTableViewController: UITableViewController {
     
     var mentor: Mentor!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Отзывы"
-        navigationItem.backButtonTitle = ""
-    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

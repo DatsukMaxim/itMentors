@@ -124,7 +124,7 @@
             </objects>
             <point key="canvasLocation" x="5696" y="129"/>
         </scene>
-        <!--Review Table View Controller-->
+        <!--Отзывы-->
         <scene sceneID="pUK-Mu-nXE">
             <objects>
                 <tableViewController id="ZoE-84-bkl" customClass="ReviewTableViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,7 +147,7 @@
                             <outlet property="delegate" destination="ZoE-84-bkl" id="hB5-ER-MnT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Lhj-2q-klS"/>
+                    <navigationItem key="navigationItem" title="Отзывы" id="Lhj-2q-klS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbf-90-Mzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
