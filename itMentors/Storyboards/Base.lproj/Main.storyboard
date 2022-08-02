@@ -19,12 +19,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WT4-LG-uSD">
                                 <rect key="frame" x="60" y="211" width="200" height="190"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8Z-NA-BOk">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8Z-NA-BOk">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o77-yP-r31">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o77-yP-r31">
                                         <rect key="frame" x="0.0" y="54" width="200" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -32,7 +32,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBW-5l-rK8">
                                         <rect key="frame" x="0.0" y="108" width="200" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Вход"/>
                                         <connections>
                                             <action selector="loginBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7O-bM-BG0"/>
                                         </connections>
@@ -40,7 +40,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufd-B7-ihB">
                                         <rect key="frame" x="0.0" y="159" width="200" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Registration"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Регистрация"/>
                                         <connections>
                                             <action selector="registrationBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="0aA-9S-dpP"/>
                                         </connections>
@@ -51,9 +51,9 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iq-uI-vSJ">
-                                <rect key="frame" x="96" y="537" width="128.5" height="31"/>
+                                <rect key="frame" x="77" y="537" width="166" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Developer Team"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Команда разработки"/>
                                 <connections>
                                     <segue destination="HTO-uC-fLW" kind="presentation" id="JQv-Kg-WY5"/>
                                 </connections>
@@ -188,7 +188,7 @@
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eCr-KL-m7I" kind="push" id="i70-CT-hGK"/>
+                                    <segue destination="eCr-KL-m7I" kind="show" id="i70-CT-hGK"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-aZ-iAd">
@@ -199,7 +199,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сфера" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-aH-xoW">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Язык программирования" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUd-aH-xoW">
                                         <rect key="frame" x="0.0" y="74" width="288" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -260,29 +260,27 @@
                                     <constraint firstAttribute="height" constant="100" id="fXE-sm-xiy"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnF-qd-HG1">
-                                <rect key="frame" x="110" y="274" width="100" height="20"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Язык программирования" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnF-qd-HG1">
+                                <rect key="frame" x="30" y="274" width="260.5" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="1YP-Yf-Un1"/>
                                     <constraint firstAttribute="height" constant="20" id="CMJ-Ag-h3l"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hz-B8-wok">
-                                <rect key="frame" x="124" y="521" width="72" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="V7s-YW-cBv"/>
-                                </constraints>
+                                <rect key="frame" x="126.5" y="521" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выход">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="P3g-N5-DIJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите предпочитаемое направление👶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI4-Ew-K5d">
-                                <rect key="frame" x="20.5" y="250" width="279" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите предпочитаемое направление👶" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI4-Ew-K5d">
+                                <rect key="frame" x="2" y="248" width="316" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -290,7 +288,6 @@
                         <viewLayoutGuide key="safeArea" id="bK7-qd-MvJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1hz-B8-wok" firstAttribute="leading" secondItem="bK7-qd-MvJ" secondAttribute="leading" constant="124" id="ICB-Gp-BI5"/>
                             <constraint firstItem="lI4-Ew-K5d" firstAttribute="centerX" secondItem="bK7-qd-MvJ" secondAttribute="centerX" id="Mu7-w7-nvo"/>
                             <constraint firstItem="YHo-Oj-zTZ" firstAttribute="top" secondItem="bK7-qd-MvJ" secondAttribute="top" constant="16" id="TPW-eX-Un9"/>
                             <constraint firstItem="bK7-qd-MvJ" firstAttribute="bottom" secondItem="1hz-B8-wok" secondAttribute="bottom" constant="16" id="YHH-iv-eiN"/>
@@ -374,6 +371,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
