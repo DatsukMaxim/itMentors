@@ -24,7 +24,7 @@ class DeveloperViewController: UIViewController {
     }
     
     @IBAction func telegramButtonTapped(_ sender: Any) {
-        if let telegramUrl = URL(string: "http://t.me/\(developer.telegram)") {
+        if let telegramUrl = URL(string: "https://t.me/\(developer.telegram)") {
             UIApplication.shared.open(telegramUrl, options: [:], completionHandler: nil)
         }
     }
