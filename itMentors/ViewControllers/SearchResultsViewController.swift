@@ -12,9 +12,7 @@ class SearchResultsViewController: UITableViewController {
     var mentorsList: [Mentor]!
     
     override func viewDidLoad() {
-        
         tableView.rowHeight = 80
-        
         navigationItem.title = "Менторы"
     }
 
@@ -40,8 +38,6 @@ class SearchResultsViewController: UITableViewController {
         return cell
     }
     
-    
-
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
