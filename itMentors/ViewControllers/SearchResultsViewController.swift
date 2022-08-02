@@ -15,7 +15,7 @@ class SearchResultsViewController: UITableViewController {
         tableView.rowHeight = 80
         navigationItem.title = "Менторы"
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         mentorsList.count
@@ -23,7 +23,7 @@ class SearchResultsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mentorCell", for: indexPath)
-
+        
         let mentor = mentorsList[indexPath.row]
         var content = cell.defaultContentConfiguration()
         
@@ -33,9 +33,9 @@ class SearchResultsViewController: UITableViewController {
         content.text = mentor.fullname
         content.secondaryText = "Rating: \(getRating(for: mentor))"
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
-
+        
         cell.contentConfiguration = content
-
+        
         return cell
     }
     

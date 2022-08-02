@@ -226,8 +226,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityTextField" destination="EUd-aH-xoW" id="naT-To-qQD"/>
                         <outlet property="cityTextField" destination="rnM-5t-1dZ" id="aJy-vt-1Xd"/>
+                        <outlet property="scopeTextField" destination="EUd-aH-xoW" id="naT-To-qQD"/>
                         <outlet property="searchButton" destination="1YY-bx-M0h" id="rXE-TG-VbL"/>
                     </connections>
                 </viewController>

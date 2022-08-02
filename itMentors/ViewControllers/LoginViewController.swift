@@ -8,7 +8,6 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var logoImage: UIImageView!
@@ -27,7 +26,7 @@ class LoginViewController: UIViewController {
         passwordTF.text = ""
         self.navigationController?.isNavigationBarHidden = true
     }
-
+    
     @IBAction func loginBtnTapped() {
         if loginTF.text == "" && passwordTF.text == "" {
             showAllert(title: "Oops, you enter empty login or password🫥", message: "Enter correct password and login")
@@ -43,7 +42,7 @@ class LoginViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainVC" {
-            let user = User(login: loginTF.text ?? "", password: passwordTF.text ?? "", preferedArea: nil, city: nil)
+            let user = User(login: loginTF.text ?? "", password: passwordTF.text ?? "", scope: nil, city: nil)
             guard let searchVC = segue.destination as? SearchViewController else { return }
             searchVC.user = user
         }

@@ -45,9 +45,9 @@ class MentorDataStore {
         "Можайск", "Йошкар-Ола", "Пенза"
     ]
     let images = [
-    "bezos", "cook", "durov",
-    "efimov", "gates", "ive",
-    "musk"
+        "bezos", "cook", "durov",
+        "efimov", "gates", "ive",
+        "musk"
     ]
     let scopes = [
         "Swift", "Objective-C", "Python",
