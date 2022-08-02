@@ -18,7 +18,9 @@ class MentorDetailsTabBarController: UITabBarController {
     
     private func setupViewControllers() {
         guard let mentorVC = viewControllers?.first as? MentorInfoViewController else { return }
-        guard let reviewsVC = viewControllers?.last as? ReviewTableViewController else { return }
+        guard let navigationVC = viewControllers?.last as? UINavigationController else { return }
+        guard let reviewsVC = navigationVC.topViewController as? ReviewTableViewController else { return }
+        
         mentorVC.mentor = mentor
         reviewsVC.mentor = mentor
     }
