@@ -29,11 +29,17 @@ class MentorInfoViewController: UIViewController {
         mentorPhotoView.layer.cornerRadius = mentorPhotoView.bounds.width / 2
     }
     
+    //MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let studentsVC = segue.destination as? StudentsTableViewController else { return }
+        studentsVC.mentor = mentor
+    }
+    
     //MARK: - Private Methods
     private func mentorLabelsSetup() {
         mentorNameLabel.text = mentor.fullname
-        mentorLanguageLabel.text = mentor.scope
-        mentorCityLabel.text = mentor.city
-        experienceLabel.text = "Work experience - \(Int.random(in: 1...10)) years"
+        mentorLanguageLabel.text = "Язык програмирования - \(mentor.scope)"
+        mentorCityLabel.text = "Город - \(mentor.city)"
+        experienceLabel.text = "Коммерческий опыт - \(Int.random(in: 1...10)) лет"
     }
 }

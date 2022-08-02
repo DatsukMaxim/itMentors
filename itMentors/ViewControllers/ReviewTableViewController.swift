@@ -19,7 +19,10 @@ class ReviewTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Review", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        
+        content.text = "\(mentor.reviews[indexPath.row].reviewerName)"
+        content.textProperties.font = UIFont.systemFont(ofSize: 25)
+        content.secondaryTextProperties.font = UIFont.systemFont(ofSize: 18)
+        content.secondaryText = "\(mentor.reviews[indexPath.row].text)"
         cell.contentConfiguration = content
         return cell
     }
