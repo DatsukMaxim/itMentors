@@ -28,5 +28,4 @@ class DeveloperViewController: UIViewController {
             UIApplication.shared.open(telegramUrl, options: [:], completionHandler: nil)
         }
     }
-
 }
