@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1111" y="128"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Mentor-->
         <scene sceneID="eUc-a3-zM3">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="RenatPart" id="OaX-df-fhI" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="RenatPart" storyboardName="Mentor" id="OaX-df-fhI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FUn-Hb-Vkq"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHD-za-knL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
