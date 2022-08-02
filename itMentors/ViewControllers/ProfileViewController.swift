@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController {
     //MARK: Public propetries
     var delegate: SearchViewController!
     var user: User!
-    var areas: [String]!
+    var scopes: [String]!
     var preferedAreaPV = UIPickerView()
     
     override func viewDidLoad() {
@@ -37,15 +37,15 @@ extension ProfileViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        areas.count
+        scopes.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        areas[row]
+        scopes[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        preferedAreaTF.text = areas[row]
+        preferedAreaTF.text = scopes[row]
         delegate.setSelection(data: preferedAreaTF.text ?? "")
     }
     

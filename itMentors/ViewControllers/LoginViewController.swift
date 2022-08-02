@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainVC" {
-            let user = User(login: loginTF.text ?? "", password: passwordTF.text ?? "", preferedArea: nil, city: nil)
+            let user = User(login: loginTF.text ?? "", password: passwordTF.text ?? "", scope: nil, city: nil)
             guard let searchVC = segue.destination as? SearchViewController else { return }
             searchVC.user = user
         }

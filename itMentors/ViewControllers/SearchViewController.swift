@@ -14,19 +14,19 @@ protocol UserDelegate {
 class SearchViewController: UIViewController {
     //MARK: - IB Outlets
     @IBOutlet weak var cityTextField: UITextField!
-    @IBOutlet weak var activityTextField: UITextField!
+    @IBOutlet weak var scopeTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     
     //MARK: - Public properties
     let mentorsList = Mentor.getMentorsList()
     var user: User!
     var cityPicker: UIPickerView!
-    var activityPicker: UIPickerView!
+    var scopePicker: UIPickerView!
     
     var cities: [String] {
         Array(Set(mentorsList.map { $0.city })).sorted(by: <)
     }
-    var activities: [String] {
+    var scopes: [String] {
         Array(Set(mentorsList.map { $0.scope })).sorted(by: <)
     }
 
@@ -36,9 +36,9 @@ class SearchViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         searchButton.layer.cornerRadius = 10
         cityPicker = createPickerView(tag: 0)
-        activityPicker = createPickerView(tag: 1)
+        scopePicker = createPickerView(tag: 1)
         cityTextField.inputView = cityPicker
-        activityTextField.inputView = activityPicker
+        scopeTextField.inputView = scopePicker
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -51,11 +51,11 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let userVC = segue.destination as? ProfileViewController {
             userVC.delegate = self
-            userVC.areas = activities
+            userVC.scopes = scopes
             userVC.user = user
         } else if let mentorsVC = segue.destination as? SearchResultsViewController {
             let selectedCity = cityTextField.text
-            let selectedActivity = activityTextField.text
+            let selectedActivity = scopeTextField.text
             
             guard selectedCity != "" || selectedActivity != "" else {
                 showAlert(with: "Упс!🤔", and: "Выберите город и направление из списка")
@@ -86,19 +86,19 @@ class SearchViewController: UIViewController {
     
     private func setUserSelection(city: String, activity: String) {
         guard let cityRow = cities.firstIndex(of: city),
-              let activityRow = activities.firstIndex(of: activity)
+              let activityRow = scopes.firstIndex(of: activity)
         else { return }
         
         cityPicker.selectRow(cityRow, inComponent: 0, animated: true)
-        activityPicker.selectRow(activityRow, inComponent: 0, animated: true)
+        scopePicker.selectRow(activityRow, inComponent: 0, animated: true)
         
         cityTextField.text = cities[cityPicker.selectedRow(inComponent: 0)]
     }
     
     private func setUserSelection(activity: String) {
-        guard let activityRow = activities.firstIndex(of: activity) else { return }
-        activityPicker.selectRow(activityRow, inComponent: 0, animated: true)
-        activityTextField.text = activities[activityPicker.selectedRow(inComponent: 0)]
+        guard let activityRow = scopes.firstIndex(of: activity) else { return }
+        scopePicker.selectRow(activityRow, inComponent: 0, animated: true)
+        scopeTextField.text = scopes[scopePicker.selectedRow(inComponent: 0)]
     }
 }
 
@@ -110,16 +110,16 @@ extension SearchViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     //кол-во элементов, доступных в pickerView
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return (pickerView.tag == 0) ? cities.count : activities.count
+        return (pickerView.tag == 0) ? cities.count : scopes.count
     }
     //позволяет отображать в каждой строке PickerView определенное значение
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-       return (pickerView.tag == 0) ? cities[row] : activities[row]
+       return (pickerView.tag == 0) ? cities[row] : scopes[row]
     }
     //позволяет работать с выбранным элементом
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerView.tag == 0 ?
-        (cityTextField.text = cities[row]) : (activityTextField.text = activities[row])
+        (cityTextField.text = cities[row]) : (scopeTextField.text = scopes[row])
     }
 }
 
