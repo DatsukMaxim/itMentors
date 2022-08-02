@@ -31,7 +31,8 @@ class MentorInfoViewController: UIViewController {
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let studentsVC = segue.destination as? StudentsTableViewController else { return }
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        guard let studentsVC = navigationVC.topViewController as? StudentsTableViewController else { return }
         studentsVC.mentor = mentor
     }
     

@@ -11,6 +11,11 @@ class StudentsTableViewController: UITableViewController {
 
     var mentor: Mentor!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Ученики"
+    }
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Int.random(in: 1...mentor.students.count)
