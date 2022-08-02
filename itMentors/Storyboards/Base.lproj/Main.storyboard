@@ -138,6 +138,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="NRI-3H-QqZ" kind="show" id="MBW-kG-y4K"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -307,6 +310,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8P-cq-D0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2531.25" y="-642.25352112676057"/>
+        </scene>
+        <!--Developer View Controller-->
+        <scene sceneID="eFA-3O-lGR">
+            <objects>
+                <viewController id="NRI-3H-QqZ" customClass="DeveloperViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7n0-ho-8Cq" customClass="Deve">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ytn-TA-JBN">
+                                <rect key="frame" x="60" y="72" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ArD-Bo-UV7"/>
+                                    <constraint firstAttribute="height" constant="200" id="uvR-ep-AgZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZO-P5-yZT">
+                                <rect key="frame" x="70" y="449" width="180" height="33.5"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Написать в Telegram">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="telegramButtonTapped:" destination="NRI-3H-QqZ" eventType="touchUpInside" id="Slp-vA-m4R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XP-Tr-WYh">
+                                <rect key="frame" x="139.5" y="288" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PWA-ow-LfS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4XP-Tr-WYh" firstAttribute="top" secondItem="ytn-TA-JBN" secondAttribute="bottom" constant="16" id="QCW-6h-vgN"/>
+                            <constraint firstItem="BZO-P5-yZT" firstAttribute="centerX" secondItem="7n0-ho-8Cq" secondAttribute="centerX" id="Rcf-ih-Q18"/>
+                            <constraint firstItem="4XP-Tr-WYh" firstAttribute="centerX" secondItem="7n0-ho-8Cq" secondAttribute="centerX" id="WuA-th-525"/>
+                            <constraint firstItem="BZO-P5-yZT" firstAttribute="centerY" secondItem="7n0-ho-8Cq" secondAttribute="centerY" multiplier="1.7" id="Ze4-pf-DfE"/>
+                            <constraint firstItem="ytn-TA-JBN" firstAttribute="top" secondItem="PWA-ow-LfS" secondAttribute="top" constant="16" id="wUp-Yc-3GU"/>
+                            <constraint firstItem="ytn-TA-JBN" firstAttribute="centerX" secondItem="7n0-ho-8Cq" secondAttribute="centerX" id="x0c-bh-dWK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="Klx-4J-el5"/>
+                    <connections>
+                        <outlet property="cityTextField" destination="4XP-Tr-WYh" id="39J-0V-6tv"/>
+                        <outlet property="photoImageView" destination="ytn-TA-JBN" id="UBi-Dg-ry1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9MY-OS-Hjd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-369" y="2229"/>
         </scene>
     </scenes>
     <resources>
