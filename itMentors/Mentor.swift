@@ -16,7 +16,7 @@ struct Mentor {
     
     let image: String
     
-    let reviews: [Review]
+    let reviews: [Review] 
     let students: [Student]
    
     var fullname: String {
@@ -47,7 +47,7 @@ struct Mentor {
 
 struct Review {
     let reviewerName: String
-    let rating: Int
+    let rating: Double
     let text: String
     
     static func getReviews() -> [Review] {
@@ -58,7 +58,7 @@ struct Review {
             result.append(
                 Review(
                     reviewerName: data.fullName,
-                    rating: Int.random(in: 1...5),
+                    rating: Double(Int.random(in: 1...5)),
                     text: data.review
                 )
             )

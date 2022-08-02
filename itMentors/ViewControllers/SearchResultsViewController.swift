@@ -31,6 +31,7 @@ class SearchResultsViewController: UITableViewController {
         
         content.image = UIImage(named: mentor.image)
         content.text = mentor.fullname
+        content.secondaryText = "Rating: \(getRating(for: mentor))"
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
 
         cell.contentConfiguration = content
@@ -44,5 +45,11 @@ class SearchResultsViewController: UITableViewController {
             guard let mentorDetailsVC = segue.destination as? MentorDetailsTabBarController else { return }
             mentorDetailsVC.mentor = mentorsList[indexPath.row]
         }
+    }
+    
+    //MARK: - Private methods
+    private func getRating(for mentor: Mentor) -> Double {
+        let rating = mentor.reviews.reduce(0, { $0 + $1.rating }) / Double(mentor.reviews.count)
+        return round(rating * 100) / 100
     }
 }
