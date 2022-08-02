@@ -29,7 +29,7 @@ class SearchViewController: UIViewController {
     var scopes: [String] {
         Array(Set(mentorsList.map { $0.scope })).sorted(by: <)
     }
-
+    
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +39,9 @@ class SearchViewController: UIViewController {
         scopePicker = createPickerView(tag: 1)
         cityTextField.inputView = cityPicker
         scopeTextField.inputView = scopePicker
+        createToolBar()
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -84,6 +85,31 @@ class SearchViewController: UIViewController {
         return picker
     }
     
+    private func createToolBar() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        cityTextField.inputAccessoryView =  toolbar
+        scopeTextField.inputAccessoryView = toolbar
+        
+        let doneButton = UIBarButtonItem(
+            title: "Done",
+            style: .plain,
+            target: self,
+            action: #selector(dismissKeyboard)
+        )
+        let flexBar = UIBarButtonItem(
+            barButtonSystemItem: .flexibleSpace,
+            target: nil,
+            action: nil
+        )
+        toolbar.items = [flexBar, doneButton]
+        toolbar.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     private func setUserSelection(city: String, activity: String) {
         guard let cityRow = cities.firstIndex(of: city),
               let activityRow = scopes.firstIndex(of: activity)
@@ -114,7 +140,7 @@ extension SearchViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     //позволяет отображать в каждой строке PickerView определенное значение
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-       return (pickerView.tag == 0) ? cities[row] : scopes[row]
+        return (pickerView.tag == 0) ? cities[row] : scopes[row]
     }
     //позволяет работать с выбранным элементом
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

@@ -14,7 +14,7 @@ struct Developer {
     let city: String
     
     var fullname: String {
-        name + " " + surname
+        "\(name) \(surname)"
     }
 }
 

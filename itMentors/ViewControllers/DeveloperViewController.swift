@@ -8,7 +8,7 @@
 import UIKit
 
 class DeveloperViewController: UIViewController {
-
+    
     @IBOutlet var photoImageView: UIImageView!
     @IBOutlet var cityTextField: UILabel!
     

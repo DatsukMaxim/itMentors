@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var logoImage: UIImageView!
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         loginTF.text = ""
         passwordTF.text = ""
     }
-
+    
     @IBAction func loginBtnTapped() {
         if loginTF.text == "" && passwordTF.text == "" {
             showAllert(title: "Oops, you enter empty login or password🫥", message: "Enter correct password and login")

@@ -18,7 +18,7 @@ struct Mentor {
     
     let reviews: [Review] 
     let students: [Student]
-   
+    
     var fullname: String {
         "\(name) \(surname)"
     }

@@ -10,7 +10,7 @@ import UIKit
 class ReviewTableViewController: UITableViewController {
     
     var mentor: Mentor!
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Int.random(in: 1...mentor.reviews.count)
