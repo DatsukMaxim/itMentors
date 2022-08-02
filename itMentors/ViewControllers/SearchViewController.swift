@@ -47,7 +47,6 @@ class SearchViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let userVC = segue.destination as? ProfileViewController {
@@ -57,14 +56,12 @@ class SearchViewController: UIViewController {
         } else if let mentorsVC = segue.destination as? SearchResultsViewController {
             let selectedCity = cityTextField.text
             let selectedActivity = scopeTextField.text
-            
             guard selectedCity != "" || selectedActivity != "" else {
                 showAlert(with: "Упс!🤔", and: "Выберите город и направление из списка")
                 return
             }
             let sortedList = mentorsList.filter {
                 ($0.city == selectedCity) && ($0.scope == selectedActivity)
-                
             }
             if sortedList.isEmpty {
                 self.showAlert(
@@ -90,7 +87,6 @@ class SearchViewController: UIViewController {
         toolbar.sizeToFit()
         cityTextField.inputAccessoryView =  toolbar
         scopeTextField.inputAccessoryView = toolbar
-        
         let doneButton = UIBarButtonItem(
             title: "Done",
             style: .plain,
@@ -110,19 +106,20 @@ class SearchViewController: UIViewController {
         view.endEditing(true)
     }
     
-    private func setUserSelection(city: String, activity: String) {
+    private func setUserSelection(city: String, scope: String) {
         guard let cityRow = cities.firstIndex(of: city),
-              let activityRow = scopes.firstIndex(of: activity)
+              let activityRow = scopes.firstIndex(of: scope)
         else { return }
         
         cityPicker.selectRow(cityRow, inComponent: 0, animated: true)
         scopePicker.selectRow(activityRow, inComponent: 0, animated: true)
         
         cityTextField.text = cities[cityPicker.selectedRow(inComponent: 0)]
+        scopeTextField.text = scopes[scopePicker.selectedRow(inComponent: 0)]
     }
     
-    private func setUserSelection(activity: String) {
-        guard let activityRow = scopes.firstIndex(of: activity) else { return }
+    private func setUserSelection(scope: String) {
+        guard let activityRow = scopes.firstIndex(of: scope) else { return }
         scopePicker.selectRow(activityRow, inComponent: 0, animated: true)
         scopeTextField.text = scopes[scopePicker.selectedRow(inComponent: 0)]
     }
@@ -162,6 +159,6 @@ extension SearchViewController {
 //MARK: - User Delegate
 extension SearchViewController: UserDelegate {
     func setSelection(data: String) {
-        setUserSelection(activity: data)
+        setUserSelection(scope: data)
     }
 }
