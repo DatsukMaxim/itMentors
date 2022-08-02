@@ -20,7 +20,7 @@ struct Mentor {
     let students: [Student]
    
     var fullname: String {
-        "\(name) \(surname)"
+        name + " " + surname
     }
     
     static func getMentorsList() -> [Mentor] {

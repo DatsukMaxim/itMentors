@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         loginTF.text = ""
         passwordTF.text = ""
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     @IBAction func loginBtnTapped() {
