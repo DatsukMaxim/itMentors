@@ -20,6 +20,7 @@
 		942D3E9A28981060006EF29C /* MentorDetailsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D3E9928981060006EF29C /* MentorDetailsTabBarController.swift */; };
 		942D3E9C28982887006EF29C /* MentorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D3E9B28982887006EF29C /* MentorInfoViewController.swift */; };
 		942D3EA028982945006EF29C /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D3E9F28982945006EF29C /* ReviewTableViewController.swift */; };
+		942D3EA228993615006EF29C /* StudentsTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D3EA128993615006EF29C /* StudentsTabBarViewController.swift */; };
 		94594DDF28968D9400A39009 /* Mentor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94594DDE28968D9400A39009 /* Mentor.storyboard */; };
 		AD61B6842892A97400881A8D /* DeveloperDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61B6832892A97400881A8D /* DeveloperDataStore.swift */; };
 		AD61B6862892A98100881A8D /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61B6852892A98100881A8D /* Developer.swift */; };
@@ -47,6 +48,7 @@
 		942D3E9928981060006EF29C /* MentorDetailsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorDetailsTabBarController.swift; sourceTree = "<group>"; };
 		942D3E9B28982887006EF29C /* MentorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorInfoViewController.swift; sourceTree = "<group>"; };
 		942D3E9F28982945006EF29C /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
+		942D3EA128993615006EF29C /* StudentsTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTabBarViewController.swift; sourceTree = "<group>"; };
 		94594DDE28968D9400A39009 /* Mentor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mentor.storyboard; sourceTree = "<group>"; };
 		AD61B6832892A97400881A8D /* DeveloperDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDataStore.swift; sourceTree = "<group>"; };
 		AD61B6852892A98100881A8D /* Developer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				942D3E9F28982945006EF29C /* ReviewTableViewController.swift */,
 				ADB10BED2897BFE800597649 /* ProfileViewController.swift */,
 				13310B532898E44100FFB1DB /* DeveloperViewController.swift */,
+				942D3EA128993615006EF29C /* StudentsTabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				AD61B6862892A98100881A8D /* Developer.swift in Sources */,
 				B38700D6289147A100568C86 /* MentorDataStore.swift in Sources */,
 				B38700DA2896929200568C86 /* SearchResultsViewController.swift in Sources */,
+				942D3EA228993615006EF29C /* StudentsTabBarViewController.swift in Sources */,
 				942D3E9A28981060006EF29C /* MentorDetailsTabBarController.swift in Sources */,
 				B38700D328907F1D00568C86 /* Mentor.swift in Sources */,
 				942D3EA028982945006EF29C /* ReviewTableViewController.swift in Sources */,
