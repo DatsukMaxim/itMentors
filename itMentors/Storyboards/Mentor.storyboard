@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCz-iV-pkG">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About-->
+        <scene sceneID="Tfk-2B-Gb6">
+            <objects>
+                <viewController id="x2i-XN-18B" customClass="MentorInfoViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wPO-pH-mw0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pd9-LU-nWF">
+                                <rect key="frame" x="75" y="5" width="170" height="170.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pd9-LU-nWF" secondAttribute="height" multiplier="1:1" id="zNz-7V-obX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mentor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNU-wS-WdB">
+                                <rect key="frame" x="65.5" y="185.5" width="189" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bzQ-zm-Nwd">
+                                <rect key="frame" x="30" y="241.5" width="260" height="109.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация о менторе:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duq-rz-okJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="246.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXm-zl-5oO">
+                                        <rect key="frame" x="0.0" y="35.5" width="67.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIS-vu-lWp">
+                                        <rect key="frame" x="0.0" y="63.5" width="26.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLr-qP-e9b">
+                                        <rect key="frame" x="0.0" y="91.5" width="114" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-1w-LfN">
+                                <rect key="frame" x="90" y="391" width="140.5" height="118"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Список учеников"/>
+                                <connections>
+                                    <segue destination="He9-up-Is6" kind="presentation" id="JEn-pi-xqU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0eM-gK-e1s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HNU-wS-WdB" firstAttribute="centerX" secondItem="0eM-gK-e1s" secondAttribute="centerX" id="1x7-Lz-YIM"/>
+                            <constraint firstItem="MbC-1w-LfN" firstAttribute="centerX" secondItem="0eM-gK-e1s" secondAttribute="centerX" id="5x2-pp-pKU"/>
+                            <constraint firstItem="MbC-1w-LfN" firstAttribute="top" relation="lessThanOrEqual" secondItem="bzQ-zm-Nwd" secondAttribute="bottom" constant="40" id="J2i-Mh-s2g"/>
+                            <constraint firstItem="pd9-LU-nWF" firstAttribute="height" secondItem="wPO-pH-mw0" secondAttribute="height" multiplier="0.29985" id="KbJ-Co-lut"/>
+                            <constraint firstItem="pd9-LU-nWF" firstAttribute="centerX" secondItem="0eM-gK-e1s" secondAttribute="centerX" id="Mmc-lc-EaG"/>
+                            <constraint firstItem="bzQ-zm-Nwd" firstAttribute="top" secondItem="HNU-wS-WdB" secondAttribute="bottom" constant="20" id="Peo-Jc-HqR"/>
+                            <constraint firstItem="pd9-LU-nWF" firstAttribute="top" secondItem="0eM-gK-e1s" secondAttribute="top" constant="5" id="buc-g4-9Dy"/>
+                            <constraint firstItem="HNU-wS-WdB" firstAttribute="top" secondItem="pd9-LU-nWF" secondAttribute="bottom" constant="10" id="g2Q-m2-FLq"/>
+                            <constraint firstItem="bzQ-zm-Nwd" firstAttribute="leading" secondItem="0eM-gK-e1s" secondAttribute="leading" constant="30" id="i09-D2-Orf"/>
+                            <constraint firstItem="0eM-gK-e1s" firstAttribute="bottom" secondItem="MbC-1w-LfN" secondAttribute="bottom" constant="10" id="tCJ-hI-a4S"/>
+                            <constraint firstItem="0eM-gK-e1s" firstAttribute="trailing" secondItem="bzQ-zm-Nwd" secondAttribute="trailing" constant="30" id="vQt-Sz-zL0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="info.circle" catalog="system" id="Hpk-fP-NAi"/>
+                    <connections>
+                        <outlet property="experienceLabel" destination="CLr-qP-e9b" id="DXb-2n-CGd"/>
+                        <outlet property="mentorCityLabel" destination="fIS-vu-lWp" id="XnY-hA-VVF"/>
+                        <outlet property="mentorLanguageLabel" destination="SXm-zl-5oO" id="e7G-0F-i0a"/>
+                        <outlet property="mentorNameLabel" destination="HNU-wS-WdB" id="rC0-CQ-eay"/>
+                        <outlet property="mentorPhotoView" destination="pd9-LU-nWF" id="EJb-4T-MFi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gCb-eY-tb8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4147.5" y="137.32394366197184"/>
+        </scene>
+        <!--Students Table View Controller-->
+        <scene sceneID="8GP-H5-HVd">
+            <objects>
+                <tableViewController id="ohm-d6-2mU" customClass="StudentsTableViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="l67-SG-0Sl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Student" id="Qlj-pn-BzK">
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qlj-pn-BzK" id="Kyf-gj-Whq">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ohm-d6-2mU" id="A4h-Dv-6rl"/>
+                            <outlet property="delegate" destination="ohm-d6-2mU" id="UZZ-9V-Rht"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="enC-Ah-mks"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aWu-Si-7RF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5696" y="129"/>
+        </scene>
+        <!--Отзывы-->
+        <scene sceneID="pUK-Mu-nXE">
+            <objects>
+                <tableViewController id="ZoE-84-bkl" customClass="ReviewTableViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ua6-o7-hm6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Review" id="We0-i4-2Cg">
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="We0-i4-2Cg" id="wft-pd-YyT">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZoE-84-bkl" id="nGK-Eh-Mbn"/>
+                            <outlet property="delegate" destination="ZoE-84-bkl" id="hB5-ER-MnT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Отзывы" id="Lhj-2q-klS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbf-90-Mzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5216.25" y="928.52112676056333"/>
+        </scene>
+        <!--Mentor Details Tab Bar Controller-->
+        <scene sceneID="G7n-s8-COC">
+            <objects>
+                <tabBarController id="oCz-iV-pkG" customClass="MentorDetailsTabBarController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="2EK-C5-FDN"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sCY-UA-i7f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="x2i-XN-18B" kind="relationship" relationship="viewControllers" id="Cld-lh-PZG"/>
+                        <segue destination="7G3-Sb-6uf" kind="relationship" relationship="viewControllers" id="sac-Zh-7M1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1BE-aW-67m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3293" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C3N-Ew-ElB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="He9-up-Is6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1GM-Ea-XCl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ohm-d6-2mU" kind="relationship" relationship="rootViewController" id="jgi-UZ-k3E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rKw-mS-Q4z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4914.375" y="138.38028169014083"/>
+        </scene>
+        <!--Отзывы-->
+        <scene sceneID="Nft-ze-om3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7G3-Sb-6uf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Отзывы" image="graduationcap.circle" catalog="system" id="xhb-Is-TTc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="auK-FC-fwP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZoE-84-bkl" kind="relationship" relationship="rootViewController" id="hoQ-cs-t28"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcm-Rs-OwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4218.75" y="928.52112676056333"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="graduationcap.circle" catalog="system" width="128" height="121"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

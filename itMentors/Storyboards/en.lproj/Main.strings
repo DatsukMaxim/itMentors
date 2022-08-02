@@ -1,0 +1,66 @@
+
+/* Class = "UIButton"; configuration.title = "Команда разработки"; ObjectID = "0iq-uI-vSJ"; */
+"0iq-uI-vSJ.configuration.title" = "Команда разработки";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0iq-uI-vSJ"; */
+"0iq-uI-vSJ.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "10P-aQ-uTQ"; */
+"10P-aQ-uTQ.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Найти"; ObjectID = "1YY-bx-M0h"; */
+"1YY-bx-M0h.normalTitle" = "Найти";
+
+/* Class = "UIButton"; configuration.title = "Выход"; ObjectID = "1hz-B8-wok"; */
+"1hz-B8-wok.configuration.title" = "Выход";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1hz-B8-wok"; */
+"1hz-B8-wok.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4XP-Tr-WYh"; */
+"4XP-Tr-WYh.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Логин"; ObjectID = "B8Z-NA-BOk"; */
+"B8Z-NA-BOk.placeholder" = "Логин";
+
+/* Class = "UIButton"; configuration.title = "Написать в Telegram"; ObjectID = "BZO-P5-yZT"; */
+"BZO-P5-yZT.configuration.title" = "Написать в Telegram";
+
+/* Class = "UITextField"; placeholder = "Язык программирования"; ObjectID = "EUd-aH-xoW"; */
+"EUd-aH-xoW.placeholder" = "Язык программирования";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "IGJ-z0-umr"; */
+"IGJ-z0-umr.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "av5-jG-qcy"; */
+"av5-jG-qcy.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Команда проекта"; ObjectID = "jRR-GC-6Yw"; */
+"jRR-GC-6Yw.title" = "Команда проекта";
+
+/* Class = "UITextField"; placeholder = "Язык программирования"; ObjectID = "jnF-qd-HG1"; */
+"jnF-qd-HG1.placeholder" = "Язык программирования";
+
+/* Class = "UILabel"; text = "Выберите предпочитаемое направление👶"; ObjectID = "lI4-Ew-K5d"; */
+"lI4-Ew-K5d.text" = "Выберите предпочитаемое направление👶";
+
+/* Class = "UITextField"; placeholder = "Пароль"; ObjectID = "o77-yP-r31"; */
+"o77-yP-r31.placeholder" = "Пароль";
+
+/* Class = "UITextField"; placeholder = "Город"; ObjectID = "rnM-5t-1dZ"; */
+"rnM-5t-1dZ.placeholder" = "Город";
+
+/* Class = "UINavigationItem"; title = "Поиск ментора"; ObjectID = "sd2-up-FPH"; */
+"sd2-up-FPH.title" = "Поиск ментора";
+
+/* Class = "UIButton"; configuration.title = "Вход"; ObjectID = "tBW-5l-rK8"; */
+"tBW-5l-rK8.configuration.title" = "Вход";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tBW-5l-rK8"; */
+"tBW-5l-rK8.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Регистрация"; ObjectID = "ufd-B7-ihB"; */
+"ufd-B7-ihB.configuration.title" = "Регистрация";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ufd-B7-ihB"; */
+"ufd-B7-ihB.normalTitle" = "Button";
