@@ -16,7 +16,6 @@
 		0BB5B0442891DC7E006EF106 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0BB5B0432891DC7E006EF106 /* .gitignore */; };
 		0BE27BA82895876800A88574 /* SearchResults.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE27BA72895876800A88574 /* SearchResults.storyboard */; };
 		0BF6D78F2892558B0003D0A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF6D78E2892558B0003D0A2 /* User.swift */; };
-		131976972899809400A70E9A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 131976962899809400A70E9A /* README.md */; };
 		13310B542898E44100FFB1DB /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13310B532898E44100FFB1DB /* DeveloperViewController.swift */; };
 		942D3E9A28981060006EF29C /* MentorDetailsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D3E9928981060006EF29C /* MentorDetailsTabBarController.swift */; };
 		942D3E9C28982887006EF29C /* MentorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942D3E9B28982887006EF29C /* MentorInfoViewController.swift */; };
@@ -45,7 +44,6 @@
 		0BB5B0432891DC7E006EF106 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0BE27BA72895876800A88574 /* SearchResults.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchResults.storyboard; sourceTree = "<group>"; };
 		0BF6D78E2892558B0003D0A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		131976962899809400A70E9A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = itMentors/README.md; sourceTree = SOURCE_ROOT; };
 		13310B532898E44100FFB1DB /* DeveloperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
 		942D3E9928981060006EF29C /* MentorDetailsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorDetailsTabBarController.swift; sourceTree = "<group>"; };
 		942D3E9B28982887006EF29C /* MentorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorInfoViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				0B2609942890003900DA573D /* Storyboards */,
 				0B2609922890002000DA573D /* App */,
 				0B26098C2890001300DA573D /* Info.plist */,
-				131976962899809400A70E9A /* README.md */,
 				0BB5B0432891DC7E006EF106 /* .gitignore */,
 			);
 			path = itMentors;
@@ -222,7 +219,6 @@
 				94594DDF28968D9400A39009 /* Mentor.storyboard in Resources */,
 				0BB5B0442891DC7E006EF106 /* .gitignore in Resources */,
 				0B26098B2890001300DA573D /* LaunchScreen.storyboard in Resources */,
-				131976972899809400A70E9A /* README.md in Resources */,
 				0BE27BA82895876800A88574 /* SearchResults.storyboard in Resources */,
 				0B2609882890001300DA573D /* Assets.xcassets in Resources */,
 				0B2609862890001100DA573D /* Main.storyboard in Resources */,
