@@ -28,6 +28,10 @@ class ProfileViewController: UIViewController {
         imageProfile.layer.cornerRadius = imageProfile.frame.height / 2
         imageProfile.clipsToBounds = true
     }
+    
+    @IBAction func logout() {
+        navigationController?.dismiss(animated: true)
+    }
 }
 
 // MARK: Extensions

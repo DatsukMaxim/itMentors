@@ -252,7 +252,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zox-sW-elH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2571" y="120"/>
+            <point key="canvasLocation" x="2521" y="348"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="52u-sX-gUr">
@@ -284,7 +284,7 @@
                                     <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="P3g-N5-DIJ"/>
+                                    <action selector="logout" destination="qjd-rJ-u6x" eventType="touchUpInside" id="QAf-WT-mBl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите предпочитаемое направление👶" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI4-Ew-K5d">
@@ -315,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8P-cq-D0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2252" y="-723"/>
+            <point key="canvasLocation" x="2520" y="-288"/>
         </scene>
         <!--Developer View Controller-->
         <scene sceneID="eFA-3O-lGR">

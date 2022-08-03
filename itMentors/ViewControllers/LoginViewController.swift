@@ -25,10 +25,6 @@ class LoginViewController: UIViewController {
         passwordTF.text = user.password
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
     @IBAction func loginBtnTapped() {
         if loginTF.text != user.login || passwordTF.text != user.password {
             showAllert(
