@@ -11,6 +11,11 @@ import Foundation
 struct User {
     let login: String
     let password: String
-    let scope: String?
-    let city: String?
+    
+    static func getUser() -> User {
+        User(
+            login: "User",
+            password: "Password"
+        )
+    }
 }
