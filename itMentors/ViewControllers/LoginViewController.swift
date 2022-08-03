@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var logoImage: UIImageView!
     
+    private let user = User.getUser()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         logoImage.layer.borderWidth = 1
@@ -19,30 +21,34 @@ class LoginViewController: UIViewController {
         logoImage.layer.borderColor = UIColor.white.cgColor
         logoImage.layer.cornerRadius = logoImage.frame.height / 2
         logoImage.clipsToBounds = true
+        loginTF.text = user.login
+        passwordTF.text = user.password
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loginTF.text = ""
-        passwordTF.text = ""
         self.navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func loginBtnTapped() {
-        if loginTF.text == "" && passwordTF.text == "" {
-            showAllert(title: "Oops, you enter empty login or password🫥", message: "Enter correct password and login")
+        if loginTF.text != user.login || passwordTF.text != user.password {
+            showAllert(
+                title: "Oops, you enter empty login or password🫥",
+                message: "Enter correct password and login"
+            )
         } else {
             performSegue(withIdentifier: "mainVC", sender: nil)
         }
     }
     
-    @IBAction func registrationBtnTapped() {
-        showAllert(title: "Something went wrong", message: "Will be available in the next development iteration")
+    @IBAction func forgotRegisterInfo(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAllert(title: "Ничего страшного 😉", message: "Ваш логин: \(user.login)")
+        : showAllert(title: "Ничего страшного 😉", message: "Ваш пароль: \(user.password)")
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainVC" {
-            let user = User(login: loginTF.text ?? "", password: passwordTF.text ?? "", scope: nil, city: nil)
             guard let searchVC = segue.destination as? SearchViewController else { return }
             searchVC.user = user
         }

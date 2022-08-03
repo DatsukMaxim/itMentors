@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--About-->
+        <!--Профиль-->
         <scene sceneID="Tfk-2B-Gb6">
             <objects>
                 <viewController id="x2i-XN-18B" customClass="MentorInfoViewController" customModule="itMentors" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                             <constraint firstItem="0eM-gK-e1s" firstAttribute="trailing" secondItem="bzQ-zm-Nwd" secondAttribute="trailing" constant="30" id="vQt-Sz-zL0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="info.circle" catalog="system" id="Hpk-fP-NAi"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="info.circle" catalog="system" id="Hpk-fP-NAi"/>
                     <connections>
                         <outlet property="experienceLabel" destination="CLr-qP-e9b" id="DXb-2n-CGd"/>
                         <outlet property="mentorCityLabel" destination="fIS-vu-lWp" id="XnY-hA-VVF"/>
